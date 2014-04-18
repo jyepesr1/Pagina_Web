@@ -1,0 +1,209 @@
+<!DOCTYPE html>  <!--indica que todo lo que sigue a continuación es HTML-->
+<html lang="es"> <!--como buena práctica se coloca el idioma de la página-->
+<head>
+	<meta charset="utf-8" /> <!--uso de caracteres especiales como tildes-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Hello World</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+
+
+    <script src="/js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="/js/vendor/underscore.js"></script>
+    <script src="/js/vendor/backbone.js"></script>
+    <script src="/js/vendor/swig.js"></script>
+
+    <script src="/js/vendor/socket.io.js"></script>
+
+    <script src="/js/vendor/neon.js"></script>
+    <script src="/js/vendor/CustomEvent.js"></script>
+    <script src="/js/vendor/CustomEventSupport.js"></script>
+    <script src="/js/vendor/PonyExpress.js"></script>    
+
+    <script src="/js/init.js"></script>
+
+    <script src="/js/backbone/models/article.js"></script>
+    <script src="/js/backbone/collections/articles.js"></script>
+
+    <script src="/js/main.js"></script>
+   
+</head>
+<body>
+	<!--la etiqueta "header", es utilizada para lo que va en la cabecera de la página web -->
+	<!--la etiqueta "nav", es utilizada para el menú de navegación de la página-->
+	<!--la etiqueta "section", es usada para introducir todo el contenido principal y donde irán todos los articulos -->
+	<!--la etiqueta "footer", es lo va al final de la página donde exsiste diferente información-->
+	<div class="header">
+		<div class="hello">
+			<h1>BIENVENIDOS</h1>
+		</div>
+	</div>
+	<nav>
+		<ul class="menu">
+			<li><a href="#"><strong>Python</strong></a></li>
+			<li><a href="#"><strong>HTML5</strong></a></li>
+			<li><a href="#"><strong>Django</strong></a></li>
+			<li><a href="#"><strong>Perl</strong></a></li>
+			<li><a href="#"><strong>Javascript</strong></a></li>
+		</ul>
+	</nav>
+	<section class="modelo">
+		<p class="contenido">
+			"Escoja el tamaño de fuente que desea"
+			<a class="tamaño" href="#14">A</a>
+			<a class="tamaño" href="#16">A</a>
+			<a class="tamaño" href="#18">A</a>
+		</p>
+		<a class="publicar" href="#"><strong>Publicar</strong></a>
+	</section>
+	<form>
+		<p>
+			<label for="Título"><strong>Título</strong></label>
+			<input placeholder="  Ingrese el título" id="Título" type="text" name="Título"></p>
+		<p>
+			<label for="Autor"><strong>Autor</strong></label>
+			<input placeholder="  Ingrese el autor" id="Autor" type="text" name="Autor"></p>
+		<input class="publicar2" value="Publicar" type="submit">	
+	</form>
+	<section class="posts">
+		<article class="post">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg">
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">Hola este es mi primer Post</h2>
+					<p class="autor">por <strong>Johan Yepes</strong></p>
+					<p class="fecha">Hace 20 min</p>
+				<div class="social">
+						<a class="face" href="#"></a>
+						<a class="insta" href="#"></a>
+						<a class="twitter" href="#"></a>
+						<a class="google" href="#"></a>
+					</div>	
+				</div>
+			</div>
+		</article>
+		<article class="post">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg">
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">Hola este es mi primer Post</h2>
+					<p class="autor">por <strong>Johan Yepes</strong></p>
+					<p class="fecha">Hace 20 min</p>
+					<div class="social">
+						<a class="face" href="#"></a>
+						<a class="insta" href="#"></a>
+						<a class="twitter" href="#"></a>
+						<a class="google" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="post">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg">
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">Hola este es mi primer Post</h2>
+					<p class="autor">por <strong>Johan Yepes</strong></p>
+					<p class="fecha">Hace 20 min</p>
+					<div class="social">
+						<a class="face" href="#"></a>
+						<a class="insta" href="#"></a>
+						<a class="twitter" href="#"></a>
+						<a class="google" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="post">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg">
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">Hola este es mi primer Post</h2>
+					<p class="autor">por <strong>Johan Yepes</strong></p>
+					<p class="fecha">Hace 20 min</p>
+					<div class="social">
+						<a class="face" href="#"></a>
+						<a class="insta" href="#"></a>
+						<a class="twitter" href="#"></a>
+						<a class="google" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</article>
+	</section>
+	<footer>
+		<p><strong>Copyright ©</strong></p>
+	</footer>
+
+	<!-- <script>
+	/* podemos hacer este tipo de sintaxis gracias a jquery, usamos el simbolo de pesos para invocar las instrucciones según el tipo de eventos, como "click", o cuando la pagina haya cargado "load".
+
+	con la funcion getElementsByClassName(), podemos obtener cualquier clase del HTML para almacenarla en una variable y usar; como pueden ser varias clases con el mismo nombre se almacenan en un arreglo, pero con jquery solo con colocar ".nombre de la clase" la podemos llamar. 
+	
+	con el function inicial lo que estamos haciendo es que se ejecuten esas funciones que posee cuando la página se abra	
+
+	*/
+
+	$(function(){
+		$(".publicar").on("click", formulario);
+
+		function formulario(ev){
+			ev.preventDefault();
+			$("form").slideToggle();
+		}
+
+		$("form").on("submit", procesarFormulario);
+
+		function procesarFormulario(envio){
+			envio.preventDefault();
+			var titulo = $("input[name=Título]").val();
+			var autor = $("input[name=Autor]").val();
+
+			var publicacion = '<article class="post"> \
+				<div class="descripcion"> \
+					<figure class="imagen"> \
+						<img src="imagenes/foto.jpg"> \
+					</figure> \
+					<div class="detalles"> \
+						<h2 class="titulo">'+titulo+'</h2> \
+						<p class="autor">por <strong>'+autor+'</strong></p> \
+						<p class="fecha">Hace 0 min</p> \
+						<div class="social"> \
+							<a class="face" href="#"></a> \
+							<a class="insta" href="#"></a> \
+							<a class="twitter" href="#"></a> \
+							<a class="google" href="#"></a> \
+						</div> \
+					</div> \
+				</div> \
+			</article>';
+
+			$(".posts").prepend($(publicacion).fadeIn());
+			$(".input[type=text]").val("");
+			$("form").slideUp();
+		}
+
+		function cambiarTamano(pixeles){
+			return function(){
+				$("body").css("font-size", pixeles+"px");
+			}
+		}
+
+		$(".tamaño").each(function(i, link){
+			var pixeles = $(link).prop("hash").substring(1);
+			$(link)
+				.css("font-size", pixeles+"px")
+				.on("click", cambiarTamano(pixeles));
+		});
+	});
+	</script> -->
+</body>
+</html>
